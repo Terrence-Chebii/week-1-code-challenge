@@ -1,5 +1,6 @@
+let calc = parseInt(basic.value) + parseInt(benefits.value); 
 
-function payee(){
+    function payee(){
     let calc = parseInt(basic.value) + parseInt(benefits.value); 
     if(calc <= 24000){
         value = calc*0.1;
@@ -11,9 +12,10 @@ function payee(){
 
     console.log(value);
     net.innerText = `Your tax is ${value}`
+    PAYEE = value
 }
 
-function nssf(){
+    function nssf(){
     let calc = parseInt(basic.value) + parseInt(benefits.value);
     if(calc <= 8000){
         withnssf = calc*0.05
@@ -22,7 +24,8 @@ function nssf(){
     }
 
     console.log(withnssf);
-    
+    net.innerText = `Your tax is ${withnssf}`
+    NSSF = withnssf
 }
 
 function nhif(){
@@ -66,15 +69,13 @@ function nhif(){
     }
     
     console.log(withnhif);
+    NHIF = withnhif
 }
 
 function netSalary(){
-    let calc = parseInt(basic.value) + parseInt(benefits.value);
-    let payee = payee(value);
-    let nssf = nssf(withnssf);
-    let nhif  = nhif(withnhif);
+    
 
-    let net = calc - (payee + nhif + nssf)
+    let net = calc - (PAYEE + NHIF + NSSF)
 
     console.log(net);
     net.innerText = `${net}`
