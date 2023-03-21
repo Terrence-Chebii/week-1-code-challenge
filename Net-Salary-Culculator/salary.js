@@ -12,7 +12,7 @@ let calc = parseInt(basic.value) + parseInt(benefits.value);
 
     console.log(value);
     net.innerText = `Your tax is ${value}`
-    PAYEE = value
+    PAYEE = payee()
 }
 
     function nssf(){
@@ -25,7 +25,7 @@ let calc = parseInt(basic.value) + parseInt(benefits.value);
 
     console.log(withnssf);
     net.innerText = `Your tax is ${withnssf}`
-    NSSF = withnssf
+    NSSF = nssf()
 }
 
 function nhif(){
@@ -69,7 +69,7 @@ function nhif(){
     }
     
     console.log(withnhif);
-    NHIF = withnhif
+    NHIF = nhif()
 }
 
 function netSalary(){
