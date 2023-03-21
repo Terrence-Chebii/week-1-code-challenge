@@ -18,6 +18,6 @@ function Convert(){
       grade = "please fill out your correct marks"
     }
     //the return value
-    console.log(grade)
+    //console.log(grade)
     gradeShow.innerText = `${grade}`;
 }
