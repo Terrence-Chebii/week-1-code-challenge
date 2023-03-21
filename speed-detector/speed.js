@@ -1,5 +1,6 @@
 //conditions
 function Convert(){
+    //takes the input and converts ot into an integer
     let pace = parseInt(speed.value);
     if(pace < 0){
         score = "The car is in reverse"

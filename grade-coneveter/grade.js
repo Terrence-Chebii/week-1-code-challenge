@@ -1,5 +1,6 @@
  // the conitions
 function Convert(){
+  //takes the input and converts it into an integer
   let number = parseInt(grade.value);
     if(number >= 101){
       grade = "Please write the correct marks";
